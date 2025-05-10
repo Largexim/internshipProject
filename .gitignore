@@ -1,0 +1,67 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Visual Studio / JetBrains Rider
+.vscode/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.suo
+*.userprefs
+*.booproj
+.idea/
+*.sln.dotsettings
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Unity Cache
+[Uu]serSettings/
+*.apk
+*.aab
+
+# Auto-generated meta files
+*.pidb.meta
+*.pdb
+*.mdb
+*.opendb
+
+# Crash logs
+sysinfo.txt
+
+# Unity Asset Store tools
+Asset Store Tools*
+
+# Builds
+*.exe
+*.app
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+
+# Rider plugin files
+.idea/
+
+# Unity Collaborate
+.collab/
+
+# Temporary backups
+*.bak
+*.old
+*.orig
+*.tmp
+
+# Logs
+*.log
