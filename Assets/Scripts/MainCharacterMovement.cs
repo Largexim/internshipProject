@@ -5,8 +5,17 @@ public class MainCharacterMovement : MonoBehaviour
 {
     [SerializeField] private float dodgeDistance = 1f;
     [SerializeField] private float dodgeDuration = 0.2f;
+    [SerializeField] private GameObject player;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private bool isDodging = false;
     private Rigidbody2D rb2D;
+
+    private void Start()
+    {
+        animator = player.GetComponent<Animator>();
+        spriteRenderer = player.GetComponent<SpriteRenderer>();
+    }
 
     void Awake()
     {
@@ -31,6 +40,9 @@ public class MainCharacterMovement : MonoBehaviour
     System.Collections.IEnumerator Dodge(Vector2 direction)
     {
         isDodging = true;
+        animator.SetBool("Flag", true);
+        if(direction == Vector2.right)
+            spriteRenderer.flipX = true;
 
         Vector2 start = rb2D.position;
         Vector2 target = start + direction * dodgeDistance;
@@ -45,5 +57,8 @@ public class MainCharacterMovement : MonoBehaviour
 
         rb2D.MovePosition(target);
         isDodging = false;
+        animator.SetBool("Flag", false);
+        if(spriteRenderer.flipX)
+            spriteRenderer.flipX = false;
     }
 }
