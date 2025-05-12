@@ -17,11 +17,11 @@ public class MainCharacterMovement : MonoBehaviour
     {
         if (!isDodging)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < 2)
+            if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < 1.5f)
             {
                 StartCoroutine(Dodge(Vector2.right));
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > -2)
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > -1.5f)
             {
                 StartCoroutine(Dodge(Vector2.left));
             }
